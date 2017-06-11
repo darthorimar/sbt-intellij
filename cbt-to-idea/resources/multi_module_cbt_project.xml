@@ -1,0 +1,84 @@
+<!--Exported info from the https://github.com/cvogt/cbt/tree/master/examples/multi-combined-example-->
+<project>
+    <name>multi-combined-example</name>
+    <root>/home/ilya/apps/cbt/examples/multi-combined-example</root>
+    <rootModule>multi-combined-example</rootModule>
+    <modules>
+        <module>
+            <name>shared</name>
+            <root>/home/ilya/apps/cbt/examples/multi-combined-example/shared</root>
+            <sourcesRoot>/home/ilya/apps/cbt/examples/multi-combined-example/shared</sourcesRoot>
+            <sources>
+                <source>/home/ilya/apps/cbt/examples/multi-combined-example/shared/SomeSharedClass.scala</source>
+            </sources>
+            <mavenDependencies>
+                <mavenDependency> org.scala-lang:scala-library:2.10.6 </mavenDependency>
+            </mavenDependencies>
+            <moduleDependencies> </moduleDependencies>
+            <parentBuild>build</parentBuild>
+        </module>
+        <module>
+            <name>sub2</name>
+            <root>/home/ilya/apps/cbt/examples/multi-combined-example/sub2</root>
+            <sourcesRoot>/home/ilya/apps/cbt/examples/multi-combined-example/sub2</sourcesRoot>
+            <sources>
+                <source>/home/ilya/apps/cbt/examples/multi-combined-example/sub2/SomeOtherConcreteClass.scala</source>
+            </sources>
+            <mavenDependencies> </mavenDependencies>
+            <moduleDependencies>
+                <moduleDependency>shared</moduleDependency>
+            </moduleDependencies>
+            <parentBuild>build</parentBuild>
+        </module>
+        <module>
+            <name>build-build</name>
+            <root>/home/ilya/apps/cbt/examples/multi-combined-example/build/build</root>
+            <sourcesRoot>/home/ilya/apps/cbt/examples/multi-combined-example/build/build</sourcesRoot>
+            <sources>
+                <source>/home/ilya/apps/cbt/examples/multi-combined-example/build/build/build.scala</source>
+            </sources>
+            <mavenDependencies>
+                <mavenDependency> org.scala-lang:scala-library:2.11.8 </mavenDependency>
+            </mavenDependencies>
+            <moduleDependencies> </moduleDependencies>
+        </module>
+        <module>
+            <name>sub1</name>
+            <root>/home/ilya/apps/cbt/examples/multi-combined-example/sub1</root>
+            <sourcesRoot>/home/ilya/apps/cbt/examples/multi-combined-example/sub1</sourcesRoot>
+            <sources>
+                <source>/home/ilya/apps/cbt/examples/multi-combined-example/sub1/SomeConcreteClass.scala</source>
+            </sources>
+            <mavenDependencies> </mavenDependencies>
+            <moduleDependencies>
+                <moduleDependency>shared</moduleDependency>
+            </moduleDependencies>
+            <parentBuild>build</parentBuild>
+        </module>
+        <module>
+            <name>multi-combined-example</name>
+            <root>/home/ilya/apps/cbt/examples/multi-combined-example</root>
+            <sourcesRoot>/home/ilya/apps/cbt/examples/multi-combined-example</sourcesRoot>
+            <sources> </sources>
+            <mavenDependencies> </mavenDependencies>
+            <moduleDependencies>
+                <moduleDependency>sub1</moduleDependency>
+                <moduleDependency>sub2</moduleDependency>
+            </moduleDependencies>
+            <parentBuild>build</parentBuild>
+        </module>
+        <module>
+            <name>build</name>
+            <root>/home/ilya/apps/cbt/examples/multi-combined-example/build</root>
+            <sourcesRoot>/home/ilya/apps/cbt/examples/multi-combined-example/build</sourcesRoot>
+            <sources>
+                <source>/home/ilya/apps/cbt/examples/multi-combined-example/build/build.scala</source>
+            </sources>
+            <mavenDependencies>
+                <mavenDependency> org.scala-lang:scala-library:2.11.8 </mavenDependency>
+            </mavenDependencies>
+            <moduleDependencies> </moduleDependencies>
+            <parentBuild>build-build</parentBuild>
+        </module>
+    </modules>
+</project>
